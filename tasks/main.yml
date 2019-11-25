@@ -14,5 +14,11 @@
     yum:
       name: docker-ce
       state: installed
+
+  - name: start docker
+    service:
+      name: docker
+      state: started
+      enabled: True
   become: True
   become_user: root
