@@ -5,7 +5,7 @@
 - block:
   - name: add docker-ce repository
     yum_repository:
-      name: "Docker CE Stable - $basearch"
+      name: "Docker-ce"
       description: "Docker CE Stable - $basearch"
       baseurl: "https://download.docker.com/linux/centos/7/$basearch/stable"
       gpgkey: "https://download.docker.com/linux/centos/gpg"
