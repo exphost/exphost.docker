@@ -7,9 +7,15 @@
     yum_repository:
       name: "Docker-ce"
       description: "Docker CE Stable - $basearch"
-      baseurl: "https://download.docker.com/linux/centos/7/$basearch/stable"
+      baseurl: "https://download.docker.com/linux/centos/$releasever/$basearch/stable"
       gpgkey: "https://download.docker.com/linux/centos/gpg"
       gpgcheck: True
+
+  - name: install iptables (needed for docker)
+    yum:
+      name: iptables
+      state: installed
+
   - name: install docker
     yum:
       name: docker-ce
