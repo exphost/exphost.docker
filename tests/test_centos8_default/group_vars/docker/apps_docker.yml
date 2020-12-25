@@ -1,0 +1,6 @@
+apps_docker:
+  docker:
+    docker:
+      type: exphost.docker
+      enabled: True
+    priority: 4
